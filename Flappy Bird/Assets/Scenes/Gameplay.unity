@@ -776,6 +776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  wallParent: {fileID: 1872196745}
   jumpVelocity: 12
   horizontalPrecision: 10
 --- !u!1 &1652570651
