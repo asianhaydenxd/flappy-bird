@@ -17,9 +17,9 @@ public class BirdMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
         {
-            rb.velocity = new Vector2(rb.velocity.x + (Camera.main.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x) / horizontalPrecision, jumpVelocity);
+            rb.velocity = new Vector2(0, jumpVelocity);
         }
     }
 }
