@@ -8,16 +8,27 @@ public class WallGeneration : MonoBehaviour
     private float timer = 0;
     public GameObject wall;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        CreateWall();
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (timer > timePerWall && BirdMovement.isFlying)
         {
-            GameObject newWall = Instantiate(wall);
-            newWall.transform.parent = gameObject.transform;
-            Destroy(newWall, 15);
+            CreateWall();
             timer = 0;
         }
         timer += Time.deltaTime;
+    }
+
+    private void CreateWall()
+    {
+        GameObject newWall = Instantiate(wall);
+        newWall.transform.parent = gameObject.transform;
+        Destroy(newWall, 15);
     }
 }
