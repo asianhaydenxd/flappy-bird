@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class ScoreUpdate : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject txt;
+    public int score;
 
     // Update is called once per frame
     void Update()
     {
-        
+        txt.GetComponent<UnityEngine.UI.Text>().text = score.ToString();
     }
 }
