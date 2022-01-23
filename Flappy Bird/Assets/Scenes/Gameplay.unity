@@ -633,6 +633,7 @@ GameObject:
   - component: {fileID: 1650271014}
   - component: {fileID: 1650271016}
   - component: {fileID: 1650271017}
+  - component: {fileID: 1650271018}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -720,7 +721,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3.5
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
@@ -752,6 +753,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1650271018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650271013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2badb5827b8ee4aa58961f057b0575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  jumpVelocity: 12
 --- !u!1 &1978935802
 GameObject:
   m_ObjectHideFlags: 0
