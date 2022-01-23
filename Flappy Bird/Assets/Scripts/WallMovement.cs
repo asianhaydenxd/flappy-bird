@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WallMovement : MonoBehaviour
 {
-    public float speed = 5;
-    public float height = 3;
+    public float speed = 2;
+    public float height = 2.2f;
 
     // Start is called before the first frame update
     void Start()
