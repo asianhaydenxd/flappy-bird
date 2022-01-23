@@ -19,7 +19,7 @@ public class BirdMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            rb.velocity = new Vector2((Camera.main.ScreenToWorldPoint(Input.mousePosition).x) / horizontalPrecision, jumpVelocity);
+            rb.velocity = new Vector2(rb.velocity.x + (Camera.main.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x) / horizontalPrecision, jumpVelocity);
         }
     }
 }
