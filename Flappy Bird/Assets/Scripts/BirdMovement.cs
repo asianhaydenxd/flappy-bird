@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BirdMovement : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class BirdMovement : MonoBehaviour
     public static bool isFlying;
     public float jumpVelocity;
     public float horizontalPrecision;
+    public float restartDelay = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -34,5 +36,12 @@ public class BirdMovement : MonoBehaviour
         {
             child.GetComponent<Rigidbody2D>().velocity *= 0;
         }
+        StartCoroutine(Restart());
+    }
+
+    IEnumerator Restart()
+    {
+        yield return new WaitForSeconds(restartDelay);
+        SceneManager.LoadScene(0);
     }
 }
