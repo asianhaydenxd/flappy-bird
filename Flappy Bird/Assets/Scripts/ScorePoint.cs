@@ -9,5 +9,6 @@ public class ScorePoint : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         scoreTracker.GetComponent<ScoreUpdate>().score++;
+        transform.gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
 }
