@@ -6,6 +6,7 @@ public class BirdMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float jumpVelocity;
+    public float horizontalPrecision;
 
     // Start is called before the first frame update
     void Start()
@@ -16,9 +17,9 @@ public class BirdMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
+        if (Input.GetMouseButtonDown(0))
         {
-            rb.velocity = new Vector2(0, jumpVelocity);
+            rb.velocity = new Vector2((Camera.main.ScreenToWorldPoint(Input.mousePosition).x) / horizontalPrecision, jumpVelocity);
         }
     }
 }
