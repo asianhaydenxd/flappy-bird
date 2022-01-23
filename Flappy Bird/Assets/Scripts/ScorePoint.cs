@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class ScorePoint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject scoreTracker;
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        
+        scoreTracker.GetComponent<ScoreUpdate>().score++;
     }
 }
