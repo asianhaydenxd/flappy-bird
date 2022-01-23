@@ -216,7 +216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  score: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,7 +860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timePerWall: 1
-  wall: {fileID: 2039947271831155139, guid: 31ff19fcd5f825b44919fd4b1eaabf68, type: 3}
+  wall: {fileID: 3830851812831631699, guid: 31ff19fcd5f825b44919fd4b1eaabf68, type: 3}
 --- !u!4 &1872196747
 Transform:
   m_ObjectHideFlags: 0
