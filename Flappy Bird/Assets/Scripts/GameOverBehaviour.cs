@@ -13,8 +13,6 @@ public class GameOverBehaviour : MonoBehaviour
     public GameObject menuBest;
 
     public GameObject menuBestLabel;
-    
-    public static int highScore = 0;
 
     void Start()
     {
@@ -27,9 +25,10 @@ public class GameOverBehaviour : MonoBehaviour
         gameOverMenu.SetActive(true);
         scoreCanvas.SetActive(false);
 
-        if (ScoreUpdate.score > highScore)
+        if (ScoreUpdate.score > PlayerPrefs.GetInt("highScore", 0))
         {
-            highScore = ScoreUpdate.score;
+            PlayerPrefs.SetInt("highScore", ScoreUpdate.score);
+
             menuBest.GetComponent<Text>().color = new Color(1, 0.89f, 0.32f, 1); // Yellow
             menuBestLabel.GetComponent<Text>().color = new Color(1, 0.89f, 0.32f, 1);
         }
@@ -40,7 +39,7 @@ public class GameOverBehaviour : MonoBehaviour
         }
 
         menuScore.GetComponent<Text>().text = ScoreUpdate.score.ToString();
-        menuBest.GetComponent<Text>().text = highScore.ToString();
+        menuBest.GetComponent<Text>().text = PlayerPrefs.GetInt("highScore", 0).ToString();
     }
 
     public void Replay()
