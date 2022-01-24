@@ -31,12 +31,15 @@ public class BirdMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        isFlying = false;
-        foreach (Transform child in wallParent.transform)
+        if (isFlying)
         {
-            child.GetComponent<Rigidbody2D>().velocity *= 0;
+            isFlying = false;
+            foreach (Transform child in wallParent.transform)
+            {
+                child.GetComponent<Rigidbody2D>().velocity *= 0;
+            }
+            
+            gameManager.GetComponent<GameOverBehaviour>().GameOver();
         }
-        
-        gameManager.GetComponent<GameOverBehaviour>().GameOver();
     }
 }

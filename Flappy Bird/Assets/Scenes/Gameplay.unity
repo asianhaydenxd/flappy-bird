@@ -1784,7 +1784,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverMenu: {fileID: 179302849}
-  scoreText: {fileID: 1604904732}
+  scoreCanvas: {fileID: 1604904732}
+  menuScore: {fileID: 181260894}
+  menuBest: {fileID: 2106989264}
+  menuBestLabel: {fileID: 1501795839}
 --- !u!1 &2106989264
 GameObject:
   m_ObjectHideFlags: 0
