@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class BirdMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameObject wallParent;
+    public GameObject gameManager;
     public static bool isFlying;
     public float jumpVelocity;
     public float horizontalPrecision;
@@ -36,12 +36,7 @@ public class BirdMovement : MonoBehaviour
         {
             child.GetComponent<Rigidbody2D>().velocity *= 0;
         }
-        StartCoroutine(Restart());
-    }
-
-    IEnumerator Restart()
-    {
-        yield return new WaitForSeconds(restartDelay);
-        SceneManager.LoadScene(0);
+        
+        gameManager.GetComponent<GameOverBehaviour>().GameOver();
     }
 }
