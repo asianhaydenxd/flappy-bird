@@ -1527,7 +1527,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   wallParent: {fileID: 1872196745}
   gameManager: {fileID: 2008441809}
-  jumpVelocity: 12
+  jumpVelocity: 10
   horizontalPrecision: 10
   restartDelay: 2
 --- !u!1 &1652570651
