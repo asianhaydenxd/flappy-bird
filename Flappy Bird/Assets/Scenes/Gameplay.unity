@@ -1744,7 +1744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ffdfe83e197da4d9dd91974ebf09aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timePerWall: 2
+  timePerWall: 1.5
   wall: {fileID: 3830851812831631699, guid: 31ff19fcd5f825b44919fd4b1eaabf68, type: 3}
 --- !u!4 &1872196747
 Transform:
